@@ -10,7 +10,7 @@ public class Task {
     private LocalDateTime createdAt;
     private LocalDateTime updateAt;
 
-    public Task(int id, String description, String status){
+    public Task(int id, String description){
         this.id = id;
         this.description = description;
         this.status = "TO-DO";
@@ -71,5 +71,15 @@ public class Task {
                 ", Status: " + status +
                 ", CreatedAt: " + createdAt +
                 ", UpdateAt: " + updateAt;
+    }
+
+    public String toJson(){
+        return "{\n" +
+                "\t\"id\": " + id + ", \n" +
+                "\t\"description\": \"" + description + "\", \n" +
+                "\t\"status\": \"" + status + "\", \n" +
+                "\t\"createdAt\": \"" + createdAt + "\", \n" +
+                "\t\"updateAt\": \"" + updateAt + "\" " +
+                "\n}";
     }
 }

@@ -14,8 +14,8 @@ public class TaskCLI {
                         if (args.length < 2){
                             System.out.println("Te faltó la descripción");
                         } else{
-                            Task task = new Task(1, "Arreglar el bug", "TO-DO");
-                            System.out.println(task);
+                            Task task = new Task(1, args[1]);
+                            System.out.println(task.toJson());
                         }
                         break;
                     case "list":
